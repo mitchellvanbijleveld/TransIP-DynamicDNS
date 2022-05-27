@@ -5,7 +5,7 @@ use \Transip\Api\Library\TransipAPI;
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Your login name on the TransIP website.
-$login = 'youraccountname';
+$login = 'ACCOUNT_NAME';
 
 // If the generated token should only be usable by whitelisted IP addresses in your Controlpanel
 $generateWhitelistOnlyTokens = true;
