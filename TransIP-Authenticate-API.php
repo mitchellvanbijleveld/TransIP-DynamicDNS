@@ -27,5 +27,5 @@ $response = $api->test()->test();
 
 if ($response === true) {
   echo 'API connection successful!';
-  echo "\n"
+  echo "\n";
 }
