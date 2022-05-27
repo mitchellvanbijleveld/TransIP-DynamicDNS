@@ -14,7 +14,7 @@ $IP_New = file_get_contents("LatestFetchedIPAddress.txt");
 echo $IP_New;
 
 if ($IP_New <> $IP_Old) {
-	echo 'difference';
+  echo 'IP is different. Updating the A Record...';
 
 require_once (__DIR__ . '/Authenticate.php');
 
@@ -31,5 +31,5 @@ $dnsEntry->setContent(trim($IP_New));
 $api->domainDns()->updateEntry($domainName, $dnsEntry);
   	
 } else {
-	echo 'no difference';
+	echo 'IP is the same as current A Record.';
 }
