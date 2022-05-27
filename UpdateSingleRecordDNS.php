@@ -16,9 +16,9 @@ echo $IP_New;
 if ($IP_New <> $IP_Old) {
   echo 'IP is different. Updating the A Record...';
 
-require_once (__DIR__ . '/Authenticate.php');
+require_once (__DIR__ . '/TransIP-Authenticate-API.php');
 
-$domainName = 'DOMAIN.TLD';
+$domainName = 'DOMAIN_TLD';
 
 // Create a DNS entry object
 $dnsEntry = new DnsEntry();
