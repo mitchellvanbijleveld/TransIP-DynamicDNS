@@ -8,7 +8,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $login = 'ACCOUNT_NAME';
 
 // If the generated token should only be usable by whitelisted IP addresses in your Controlpanel
-$generateWhitelistOnlyTokens = true;
+$generateWhitelistOnlyTokens = false;
 
 // One of your private keys; these can be requested via your Controlpanel
 $privateKey = '';
