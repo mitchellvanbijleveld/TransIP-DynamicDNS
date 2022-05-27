@@ -3,14 +3,14 @@
 use Transip\Api\Library\Entity\Domain\DnsEntry;
 
 // Get Latest Saved IP.
-$IP_Old = file_get_contents"LatestFetchedIPAddress.txt";
+$IP_Old = file_get_contents("LatestFetchedIPAddress.txt");
 echo $IP_Old;
 
 //Run Script to Get Updated IP.
 shell_exec('sh GetIP.sh');
 
 // Get Latest Fetched And Saved IP.
-$IP_New = file_get_contents"LatestFetchedIPAddress.txt";
+$IP_New = file_get_contents("LatestFetchedIPAddress.txt");
 echo $IP_New;
 
 if ($IP_New <> $IP_Old) {
