@@ -3,20 +3,14 @@
 use Transip\Api\Library\Entity\Domain\DnsEntry;
 
 // Get Latest Saved IP.
-$CurrentIPRecord = "LatestFetchedIPAddress.txt";
-//The "x" parameter can be "r","w" or "a"
-$HandleCurrentIPRecord = fopen($CurrentIPRecord, "r");
-$IP_Old = fread($HandleCurrentIPRecord, filesize($CurrentIPRecord));
+$IP_Old = file_get_contents"LatestFetchedIPAddress.txt";
 echo $IP_Old;
 
 //Run Script to Get Updated IP.
 shell_exec('sh GetIP.sh');
 
 // Get Latest Fetched And Saved IP.
-$FetchedExternalIPRecord = "LatestFetchedIPAddress.txt";
-//The "x" parameter can be "r","w" or "a"
-$HandleFetchedIPRecord = fopen($FetchedExternalIPRecord, "r");
-$IP_New = fread($HandleFetchedIPRecord, filesize($FetchedExternalIPRecord));
+$IP_New = file_get_contents"LatestFetchedIPAddress.txt";
 echo $IP_New;
 
 if ($IP_New <> $IP_Old) {
