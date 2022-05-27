@@ -7,7 +7,7 @@ $IP_Old = file_get_contents("LatestFetchedIPAddress.txt");
 echo $IP_Old;
 
 //Run Script to Get Updated IP.
-shell_exec('sh GetIP.sh');
+shell_exec('sh GetExternalIP.sh');
 
 // Get Latest Fetched And Saved IP.
 $IP_New = file_get_contents("LatestFetchedIPAddress.txt");
