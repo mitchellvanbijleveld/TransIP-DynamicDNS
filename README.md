@@ -4,7 +4,9 @@ Custom Dynamic DNS implementation with help of the TransIP API.
 ## Usage
 Run the following command in a terminal to execute the script:
 
-`php UpdateSingleRecordDNS.php`
+```
+php UpdateSingleRecordDNS.php
+```
 
 ## What are the files used for?
 This project only contains four files. Executing the 'UpdateSingleRecordDNS.php' file will run the project on its own if all variables are set correctly.
