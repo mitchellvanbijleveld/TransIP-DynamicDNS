@@ -34,6 +34,6 @@ $dnsEntry->setContent(trim($IP_New));
 $api->domainDns()->updateEntry($domainName, $dnsEntry);
 
 } else {
-	echo "IP is the same as current A Record.";
+  echo "IP is the same as current A Record.";
   echo "\n";
 }
